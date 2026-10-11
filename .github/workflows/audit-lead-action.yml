@@ -1,0 +1,81 @@
+name: Audit lead action
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: Action selected from the lead alert
+        required: true
+        type: choice
+        options:
+          - schedule_appointment
+          - remind_me_later
+          - ignore
+          - put_in_queue
+      lead_id:
+        description: Source lead ID
+        required: true
+        type: string
+      record_id:
+        description: Stable record ID
+        required: true
+        type: string
+      selected_by:
+        description: Authenticated lead or representative identity
+        required: true
+        type: string
+      next_reminder_at:
+        description: Optional ISO 8601 reminder time with timezone
+        required: false
+        type: string
+      appointment_at:
+        description: Optional ISO 8601 appointment time with timezone
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  audit-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Record selected action
+        env:
+          SELECTED_ACTION: ${{ inputs.action }}
+          LEAD_ID: ${{ inputs.lead_id }}
+          RECORD_ID: ${{ inputs.record_id }}
+          SELECTED_BY: ${{ inputs.selected_by }}
+          NEXT_REMINDER_AT: ${{ inputs.next_reminder_at }}
+          APPOINTMENT_AT: ${{ inputs.appointment_at }}
+        run: |
+          args=(--action "$SELECTED_ACTION" --lead-id "$LEAD_ID" --record-id "$RECORD_ID" --selected-by "$SELECTED_BY")
+          if [ -n "$NEXT_REMINDER_AT" ]; then
+            args+=(--next-reminder-at "$NEXT_REMINDER_AT")
+          fi
+          if [ -n "$APPOINTMENT_AT" ]; then
+            args+=(--appointment-at "$APPOINTMENT_AT")
+          fi
+          python pipeline/05_auditing_record.py "${args[@]}"
+
+      - name: Commit audit metadata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add metadata/audit_metadata.json
+          if git diff --cached --quiet; then
+            echo "Audit metadata is already current."
+          else
+            git commit -m "Record lead action selection"
+            git push
+          fi

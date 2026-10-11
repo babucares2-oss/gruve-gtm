@@ -1,0 +1,108 @@
+﻿name: Lead pipeline
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipeline/**"
+      - "metadata/**"
+      - "scoring_config.json"
+      - "sources/lead_records.csv"
+      - ".github/workflows/score-leads.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "pipeline/**"
+      - "metadata/**"
+      - "scoring_config.json"
+      - "sources/lead_records.csv"
+      - ".github/workflows/score-leads.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lead-pipeline:
+    name: Five stage lead pipeline
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Read source
+        run: python pipeline/01_read_source.py
+
+      - name: Data extraction
+        run: python pipeline/02_data_extraction.py
+
+      - name: Weightage assessment
+        run: python pipeline/03_weightage_assessment.py
+
+      - name: Lead notification
+        run: python pipeline/04_lead_notification.py
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ vars.SMTP_PORT || '587' }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          LEAD_NOTIFICATION_FROM: ${{ secrets.LEAD_NOTIFICATION_FROM }}
+          LEAD_NOTIFICATION_TO: ${{ secrets.LEAD_NOTIFICATION_TO }}
+          LEAD_ACTION_BASE_URL: ${{ vars.LEAD_ACTION_BASE_URL }}
+
+      - name: Auditing record
+        run: python pipeline/05_auditing_record.py
+
+      - name: Publish pipeline outputs
+        uses: actions/upload-artifact@v7
+        with:
+          name: lead-pipeline-output
+          path: output/
+          if-no-files-found: error
+
+      - name: Save metadata artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: pipeline-metadata-state
+          path: metadata/
+          if-no-files-found: error
+
+  persist-pipeline-metadata:
+    name: Persist pipeline metadata
+    needs: lead-pipeline
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Download pipeline metadata
+        uses: actions/download-artifact@v7
+        with:
+          name: pipeline-metadata-state
+          path: downloaded-metadata
+
+      - name: Update tracked metadata
+        run: |
+          cp downloaded-metadata/record_metadata.json metadata/record_metadata.json
+          cp downloaded-metadata/audit_metadata.json metadata/audit_metadata.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add metadata/record_metadata.json metadata/audit_metadata.json
+          if git diff --cached --quiet; then
+            echo "Metadata is already current."
+          else
+            git commit -m "Update lead and audit metadata"
+            git push
+          fi
+
+

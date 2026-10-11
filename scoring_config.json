@@ -1,0 +1,199 @@
+{
+  "deal_category_rules": [
+    {
+      "label": "Now or Never Deal",
+      "metric": "readiness_points",
+      "operator": "gte",
+      "value": 18
+    },
+    {
+      "label": "Promising Lead",
+      "metric": "requestor_title_points",
+      "operator": "gte",
+      "value": 40
+    },
+    {
+      "label": "Hot Deal",
+      "metric": "target_industry_points",
+      "operator": "gte",
+      "value": 17.5
+    },
+    {
+      "label": "Interesting Deal",
+      "any": [
+        { "metric": "infra_signal_points", "operator": "gt", "value": 0 },
+        { "metric": "target_industry_points", "operator": "gt", "value": 0 }
+      ]
+    }
+  ],
+  "deal_category_default": "Interesting Deal",
+  "major_categories": [
+    {
+      "name": "category_1",
+      "weight_pct": 40,
+      "subcategories": [
+        {
+          "name": "target_industry",
+          "field": "industry_type",
+          "type": "category",
+          "max_points": 20,
+          "values": {
+            "Financial Services": 20,
+            "Finance": 20,
+            "Healthcare": 17.5,
+            "Health Care": 17.5,
+            "Manufacturing": 10,
+            "Energy": 7.5,
+            "Insurance": 5,
+            "Telecom": 2.5,
+            "Telecommunications": 2.5
+          },
+          "default": 0
+        },
+        {
+          "name": "company_size",
+          "field": "company_size",
+          "type": "number_range",
+          "max_points": 10,
+          "bands": [
+            { "min": 10000, "score": 10 },
+            { "min": 5000, "max": 10000, "score": 7.5 },
+            { "min": 2000, "max": 5000, "score": 5 },
+            { "min": 1000, "max": 2000, "score": 2.5 }
+          ]
+        },
+        {
+          "name": "infra_signal",
+          "field": "signal_message",
+          "type": "keyword",
+          "max_points": 10,
+          "keywords": {
+            "openshift": 3.333333,
+            "siem": 3.333333,
+            "on-prem": 3.333333,
+            "on prem": 3.333333,
+            "cloud": 3.333333
+          }
+        }
+      ]
+    },
+    {
+      "name": "category_2",
+      "weight_pct": 40,
+      "subcategories": [
+        {
+          "name": "requestor_title",
+          "field": "title",
+          "type": "title_priority",
+          "max_points": 40,
+          "tiers": [
+            {
+              "score": 40,
+              "matches": [
+                "CTO",
+                "Chief Technology Officer",
+                "CIO",
+                "Chief Information Officer",
+                "CAIO",
+                "Chief AI Officer",
+                "Chief Artificial Intelligence Officer"
+              ]
+            },
+            {
+              "score": 30,
+              "matches": [
+                "VP Engineering",
+                "VP of Engineering",
+                "Vice President Engineering",
+                "Vice President of Engineering",
+                "Head of Engineering",
+                "Head Engineering",
+                "VP AI",
+                "VP of AI",
+                "Head AI",
+                "Vice President of AI",
+                "Head of AI",
+                "Head of Artificial Intelligence",
+                "VP IT Platform",
+                "VP of IT Platform",
+                "Vice President of IT Platform",
+                "Head of IT Platform",
+                "Director of Data Science",
+                "Director Data Science",
+                "Director of Data Sciences"
+              ]
+            },
+            {
+              "score": 20,
+              "matches": [
+                "Architect",
+                "Architects",
+                "Solutions Architect",
+                "Enterprise Architect",
+                "Cloud Architect",
+                "Infrastructure Architect",
+                "AI Architect",
+                "Data Architect",
+                "Head of Operations",
+                "Director of Operations",
+                "Operations Director"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "readiness",
+      "weight_pct": 20,
+      "subcategories": [
+        {
+          "name": "budget_approval",
+          "field": "engagement_signal",
+          "type": "keyword",
+          "max_points": 8,
+          "keywords": {
+            "budget allocated": 4,
+            "budget is allocated": 4,
+            "approved": 4
+          }
+        },
+        {
+          "name": "purchase_timeline",
+          "field": "engagement_signal",
+          "type": "timeline",
+          "max_points": 6,
+          "future_quarter_score": 6,
+          "past_quarter_score": 0
+        },
+        {
+          "name": "request_frequency",
+          "field": "company_request_count",
+          "type": "number_range",
+          "max_points": 4,
+          "bands": [
+            { "min": 5, "score": 4 },
+            { "min": 3, "max": 5, "score": 3 },
+            { "min": 2, "max": 3, "score": 2 },
+            { "min": 1, "max": 2, "score": 1 }
+          ]
+        },
+        {
+          "name": "external_engagement",
+          "field": "engagement_signal",
+          "type": "keyword",
+          "max_points": 2,
+          "keywords": {
+            "social media": 1,
+            "followed": 1,
+            "follows": 1,
+            "linkedin": 1,
+            "product launch": 2,
+            "launch attendance": 2,
+            "attended product launch": 2
+          }
+        }
+      ]
+    }
+  ]
+}

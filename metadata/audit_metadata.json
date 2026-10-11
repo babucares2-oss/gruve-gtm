@@ -1,370 +1,340 @@
 {
-    "records":  [
-                    {
-                        "record_id":  "7b946339-d780-46c7-a0c9-217139b539fc",
-                        "lead_id":  "GRV-10231",
-                        "company_name":  "Meridian Fincorp",
-                        "title":  "VP Infrastructure",
-                        "action_history":  [
-                                               {
-                                                   "action":  "remind_me_later",
-                                                   "selected_by":  "sample.representative@example.com",
-                                                   "selected_at":  "2026-10-03T16:00:00+00:00",
-                                                   "next_reminder_at":  "2026-10-10T16:00:00+00:00",
-                                                   "appointment_at":  null
-                                               }
-                                           ],
-                        "industry_type":  "Financial Services",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  "remind_me_later",
-                        "selected_by":  "sample.representative@example.com",
-                        "action_selected_at":  "2026-10-03T16:00:00+00:00",
-                        "next_reminder_at":  "2026-10-10T16:00:00+00:00",
-                        "last_notified_at":  "2026-10-03T16:00:00+00:00",
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "a0148e13-d1fd-49f6-9331-d407433948a0",
-                        "lead_id":  "GRV-10232",
-                        "company_name":  "Northwind Manufacturing",
-                        "title":  "",
-                        "action_history":  [
-                                               {
-                                                   "action":  "put_in_queue",
-                                                   "selected_by":  "sample.representative@example.com",
-                                                   "selected_at":  "2026-10-08T15:30:00+00:00",
-                                                   "next_reminder_at":  "2026-10-18T15:30:00+00:00",
-                                                   "appointment_at":  null
-                                               }
-                                           ],
-                        "industry_type":  "Manufacturing",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  "put_in_queue",
-                        "selected_by":  "sample.representative@example.com",
-                        "action_selected_at":  "2026-10-08T15:30:00+00:00",
-                        "next_reminder_at":  "2026-10-18T15:30:00+00:00",
-                        "last_notified_at":  "2026-10-08T15:30:00+00:00",
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "a70c9f55-8a8c-486c-ad2c-cb81e35aced5",
-                        "lead_id":  "GRV-10233",
-                        "company_name":  "Cascadia Health Systems",
-                        "title":  "Chief Data Officer",
-                        "action_history":  [
-                                               {
-                                                   "action":  "schedule_appointment",
-                                                   "selected_by":  "sample.representative@example.com",
-                                                   "selected_at":  "2026-10-07T14:00:00+00:00",
-                                                   "next_reminder_at":  null,
-                                                   "appointment_at":  "2026-10-14T14:00:00+00:00"
-                                               }
-                                           ],
-                        "industry_type":  "Healthcare",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  "schedule_appointment",
-                        "selected_by":  "sample.representative@example.com",
-                        "action_selected_at":  "2026-10-07T14:00:00+00:00",
-                        "next_reminder_at":  null,
-                        "last_notified_at":  "2026-10-07T14:00:00+00:00",
-                        "appointment_at":  "2026-10-14T14:00:00+00:00"
-                    },
-                    {
-                        "record_id":  "88ba7bc1-ef03-4cd6-bd20-01a8abfa78ba",
-                        "lead_id":  "GRV-10234",
-                        "company_name":  "Vantage Retail Group",
-                        "title":  "Director of Machine Learning",
-                        "action_history":  [
-                                               {
-                                                   "action":  "ignore",
-                                                   "selected_by":  "sample.representative@example.com",
-                                                   "selected_at":  "2026-10-07T14:15:00+00:00",
-                                                   "next_reminder_at":  null,
-                                                   "appointment_at":  null
-                                               }
-                                           ],
-                        "industry_type":  "Retail",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  "ignore",
-                        "selected_by":  "sample.representative@example.com",
-                        "action_selected_at":  "2026-10-07T14:15:00+00:00",
-                        "next_reminder_at":  null,
-                        "last_notified_at":  "2026-10-07T14:15:00+00:00",
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "fa154822-f4ac-4eaf-b61f-a58b37340d45",
-                        "lead_id":  "GRV-10235",
-                        "company_name":  "Ironclad Insurance Holdings",
-                        "title":  "",
-                        "action_history":  [
-
-                                           ],
-                        "industry_type":  "Insurance",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  null,
-                        "selected_by":  null,
-                        "action_selected_at":  null,
-                        "next_reminder_at":  null,
-                        "last_notified_at":  null,
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "7887551c-c507-4032-ade3-83edd6ec0361",
-                        "lead_id":  "GRV-10236",
-                        "company_name":  "BluePeak Logistics",
-                        "title":  "IT Procurement Manager",
-                        "action_history":  [
-
-                                           ],
-                        "industry_type":  "Logistics",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  null,
-                        "selected_by":  null,
-                        "action_selected_at":  null,
-                        "next_reminder_at":  null,
-                        "last_notified_at":  null,
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "ae44513c-4808-44d7-8302-333120c39966",
-                        "lead_id":  "GRV-10237",
-                        "company_name":  "Solaris Energy Partners",
-                        "title":  "CIO",
-                        "action_history":  [
-
-                                           ],
-                        "industry_type":  "Energy",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  null,
-                        "selected_by":  null,
-                        "action_selected_at":  null,
-                        "next_reminder_at":  null,
-                        "last_notified_at":  null,
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "5fb26c56-1931-411a-bb74-cb64b5da61c7",
-                        "lead_id":  "GRV-10238",
-                        "company_name":  "Crestview Bank",
-                        "title":  "VP Engineering",
-                        "action_history":  [
-
-                                           ],
-                        "industry_type":  "Financial Services",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  null,
-                        "selected_by":  null,
-                        "action_selected_at":  null,
-                        "next_reminder_at":  null,
-                        "last_notified_at":  null,
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "2489e104-b325-4510-bd67-a6f87dd106c2",
-                        "lead_id":  "GRV-10239",
-                        "company_name":  "Arbor Telecom",
-                        "title":  "",
-                        "action_history":  [
-
-                                           ],
-                        "industry_type":  "Telecom",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  null,
-                        "selected_by":  null,
-                        "action_selected_at":  null,
-                        "next_reminder_at":  null,
-                        "last_notified_at":  null,
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "9fb29272-6c96-4aa0-be22-f6b5468d09d8",
-                        "lead_id":  "GRV-10240",
-                        "company_name":  "Trellis Foods",
-                        "title":  "Marketing Coordinator",
-                        "action_history":  [
-
-                                           ],
-                        "industry_type":  "Food \u0026 Beverage",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  null,
-                        "selected_by":  null,
-                        "action_selected_at":  null,
-                        "next_reminder_at":  null,
-                        "last_notified_at":  null,
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "4764a13f-6041-4d9e-bdbd-36159cdcd1ac",
-                        "lead_id":  "GRV-10241",
-                        "company_name":  "Highgate Capital",
-                        "title":  "Head of AI \u0026 Data Platforms",
-                        "action_history":  [
-
-                                           ],
-                        "industry_type":  "Financial Services",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  null,
-                        "selected_by":  null,
-                        "action_selected_at":  null,
-                        "next_reminder_at":  null,
-                        "last_notified_at":  null,
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "e306d0bf-6414-4c53-a8b3-1436529a39cc",
-                        "lead_id":  "GRV-10242",
-                        "company_name":  "Fieldstone Manufacturing",
-                        "title":  "VP IT Infrastructure",
-                        "action_history":  [
-
-                                           ],
-                        "industry_type":  "Manufacturing",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  null,
-                        "selected_by":  null,
-                        "action_selected_at":  null,
-                        "next_reminder_at":  null,
-                        "last_notified_at":  null,
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "8fbdd3df-149a-4239-979c-8f2d6e83faff",
-                        "lead_id":  "GRV-10243",
-                        "company_name":  "Anchorpoint Insurance",
-                        "title":  "Chief Technology Officer",
-                        "action_history":  [
-
-                                           ],
-                        "industry_type":  "Insurance",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  null,
-                        "selected_by":  null,
-                        "action_selected_at":  null,
-                        "next_reminder_at":  null,
-                        "last_notified_at":  null,
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "87200604-38b4-4db0-802e-0dacb2a1a9fc",
-                        "lead_id":  "GRV-10244",
-                        "company_name":  "Comet Retailers",
-                        "title":  "",
-                        "action_history":  [
-
-                                           ],
-                        "industry_type":  "Retail",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  null,
-                        "selected_by":  null,
-                        "action_selected_at":  null,
-                        "next_reminder_at":  null,
-                        "last_notified_at":  null,
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "8b39861c-babf-4aa9-8ea8-80b515928a67",
-                        "lead_id":  "GRV-10245",
-                        "company_name":  "Lumen Health Partners",
-                        "title":  "Director of Digital Transformation",
-                        "action_history":  [
-
-                                           ],
-                        "industry_type":  "Healthcare",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  null,
-                        "selected_by":  null,
-                        "action_selected_at":  null,
-                        "next_reminder_at":  null,
-                        "last_notified_at":  null,
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "6ea14720-ce67-42f1-a8d9-3d572afd8cdb",
-                        "lead_id":  "GRV-10246",
-                        "company_name":  "Pinnacle Aerospace",
-                        "title":  "Procurement Specialist",
-                        "action_history":  [
-
-                                           ],
-                        "industry_type":  "Aerospace \u0026 Defense",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  null,
-                        "selected_by":  null,
-                        "action_selected_at":  null,
-                        "next_reminder_at":  null,
-                        "last_notified_at":  null,
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "7a0af75c-7cd6-4809-9aeb-bb6874bcd3e2",
-                        "lead_id":  "GRV-10247",
-                        "company_name":  "Redwood Biotech",
-                        "title":  "VP Data \u0026 Analytics",
-                        "action_history":  [
-
-                                           ],
-                        "industry_type":  "Biotechnology",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  null,
-                        "selected_by":  null,
-                        "action_selected_at":  null,
-                        "next_reminder_at":  null,
-                        "last_notified_at":  null,
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "1422e0cb-2e42-4b38-94bd-78bf1c27ae90",
-                        "lead_id":  "GRV-10248",
-                        "company_name":  "Summit Public Services Authority",
-                        "title":  "Chief AI Officer",
-                        "action_history":  [
-
-                                           ],
-                        "industry_type":  "Public Sector",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  null,
-                        "selected_by":  null,
-                        "action_selected_at":  null,
-                        "next_reminder_at":  null,
-                        "last_notified_at":  null,
-                        "appointment_at":  null
-                    },
-                    {
-                        "record_id":  "c45d260a-543d-4cab-96a5-ce733e71e4f7",
-                        "lead_id":  "GRV-10249",
-                        "company_name":  "Frostline Retail Co.",
-                        "title":  "",
-                        "action_history":  [
-
-                                           ],
-                        "industry_type":  "Retail",
-                        "score_pct":  null,
-                        "deal_category":  null,
-                        "selected_action":  null,
-                        "selected_by":  null,
-                        "action_selected_at":  null,
-                        "next_reminder_at":  null,
-                        "last_notified_at":  null,
-                        "appointment_at":  null
-                    }
-                ]
+  "records": [
+    {
+      "record_id": "7b946339-d780-46c7-a0c9-217139b539fc",
+      "lead_id": "GRV-10231",
+      "company_name": "Meridian Fincorp",
+      "title": "VP Infrastructure",
+      "action_history": [
+        {
+          "action": "remind_me_later",
+          "selected_by": "sample.representative@example.com",
+          "selected_at": "2026-10-03T16:00:00+00:00",
+          "next_reminder_at": "2026-10-10T16:00:00+00:00",
+          "appointment_at": null
+        }
+      ],
+      "industry_type": "Financial Services",
+      "score_pct": "31.833333",
+      "deal_category": "Hot Deal",
+      "selected_action": "remind_me_later",
+      "selected_by": "sample.representative@example.com",
+      "action_selected_at": "2026-10-03T16:00:00+00:00",
+      "next_reminder_at": "2026-10-10T16:00:00+00:00",
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "a0148e13-d1fd-49f6-9331-d407433948a0",
+      "lead_id": "GRV-10232",
+      "company_name": "Northwind Manufacturing",
+      "title": "",
+      "action_history": [
+        {
+          "action": "put_in_queue",
+          "selected_by": "sample.representative@example.com",
+          "selected_at": "2026-10-08T15:30:00+00:00",
+          "next_reminder_at": "2026-10-18T15:30:00+00:00",
+          "appointment_at": null
+        }
+      ],
+      "industry_type": "Manufacturing",
+      "score_pct": "21.0",
+      "deal_category": "Interesting Deal",
+      "selected_action": "put_in_queue",
+      "selected_by": "sample.representative@example.com",
+      "action_selected_at": "2026-10-08T15:30:00+00:00",
+      "next_reminder_at": "2026-10-18T15:30:00+00:00",
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "a70c9f55-8a8c-486c-ad2c-cb81e35aced5",
+      "lead_id": "GRV-10233",
+      "company_name": "Cascadia Health Systems",
+      "title": "Chief Data Officer",
+      "action_history": [
+        {
+          "action": "schedule_appointment",
+          "selected_by": "sample.representative@example.com",
+          "selected_at": "2026-10-07T14:00:00+00:00",
+          "next_reminder_at": null,
+          "appointment_at": "2026-10-14T14:00:00+00:00"
+        }
+      ],
+      "industry_type": "Healthcare",
+      "score_pct": "23.5",
+      "deal_category": "Hot Deal",
+      "selected_action": "schedule_appointment",
+      "selected_by": "sample.representative@example.com",
+      "action_selected_at": "2026-10-07T14:00:00+00:00",
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": "2026-10-14T14:00:00+00:00"
+    },
+    {
+      "record_id": "88ba7bc1-ef03-4cd6-bd20-01a8abfa78ba",
+      "lead_id": "GRV-10234",
+      "company_name": "Vantage Retail Group",
+      "title": "Director of Machine Learning",
+      "action_history": [
+        {
+          "action": "ignore",
+          "selected_by": "sample.representative@example.com",
+          "selected_at": "2026-10-07T14:15:00+00:00",
+          "next_reminder_at": null,
+          "appointment_at": null
+        }
+      ],
+      "industry_type": "Retail",
+      "score_pct": "8.5",
+      "deal_category": "Interesting Deal",
+      "selected_action": "ignore",
+      "selected_by": "sample.representative@example.com",
+      "action_selected_at": "2026-10-07T14:15:00+00:00",
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "fa154822-f4ac-4eaf-b61f-a58b37340d45",
+      "lead_id": "GRV-10235",
+      "company_name": "Ironclad Insurance Holdings",
+      "title": "",
+      "action_history": [],
+      "industry_type": "Insurance",
+      "score_pct": "8.5",
+      "deal_category": "Interesting Deal",
+      "selected_action": null,
+      "selected_by": null,
+      "action_selected_at": null,
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "7887551c-c507-4032-ade3-83edd6ec0361",
+      "lead_id": "GRV-10236",
+      "company_name": "BluePeak Logistics",
+      "title": "IT Procurement Manager",
+      "action_history": [],
+      "industry_type": "Logistics",
+      "score_pct": "6.0",
+      "deal_category": "Interesting Deal",
+      "selected_action": null,
+      "selected_by": null,
+      "action_selected_at": null,
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "ae44513c-4808-44d7-8302-333120c39966",
+      "lead_id": "GRV-10237",
+      "company_name": "Solaris Energy Partners",
+      "title": "CIO",
+      "action_history": [],
+      "industry_type": "Energy",
+      "score_pct": "59.333332999999996",
+      "deal_category": "Promising Lead",
+      "selected_action": null,
+      "selected_by": null,
+      "action_selected_at": null,
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "5fb26c56-1931-411a-bb74-cb64b5da61c7",
+      "lead_id": "GRV-10238",
+      "company_name": "Crestview Bank",
+      "title": "VP Engineering",
+      "action_history": [],
+      "industry_type": "Financial Services",
+      "score_pct": "61.0",
+      "deal_category": "Hot Deal",
+      "selected_action": null,
+      "selected_by": null,
+      "action_selected_at": null,
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "2489e104-b325-4510-bd67-a6f87dd106c2",
+      "lead_id": "GRV-10239",
+      "company_name": "Arbor Telecom",
+      "title": "",
+      "action_history": [],
+      "industry_type": "Telecom",
+      "score_pct": "13.5",
+      "deal_category": "Interesting Deal",
+      "selected_action": null,
+      "selected_by": null,
+      "action_selected_at": null,
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "9fb29272-6c96-4aa0-be22-f6b5468d09d8",
+      "lead_id": "GRV-10240",
+      "company_name": "Trellis Foods",
+      "title": "Marketing Coordinator",
+      "action_history": [],
+      "industry_type": "Food & Beverage",
+      "score_pct": "1.0",
+      "deal_category": "Interesting Deal",
+      "selected_action": null,
+      "selected_by": null,
+      "action_selected_at": null,
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "4764a13f-6041-4d9e-bdbd-36159cdcd1ac",
+      "lead_id": "GRV-10241",
+      "company_name": "Highgate Capital",
+      "title": "Head of AI & Data Platforms",
+      "action_history": [],
+      "industry_type": "Financial Services",
+      "score_pct": "58.5",
+      "deal_category": "Hot Deal",
+      "selected_action": null,
+      "selected_by": null,
+      "action_selected_at": null,
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "e306d0bf-6414-4c53-a8b3-1436529a39cc",
+      "lead_id": "GRV-10242",
+      "company_name": "Fieldstone Manufacturing",
+      "title": "VP IT Infrastructure",
+      "action_history": [],
+      "industry_type": "Manufacturing",
+      "score_pct": "11.0",
+      "deal_category": "Interesting Deal",
+      "selected_action": null,
+      "selected_by": null,
+      "action_selected_at": null,
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "8fbdd3df-149a-4239-979c-8f2d6e83faff",
+      "lead_id": "GRV-10243",
+      "company_name": "Anchorpoint Insurance",
+      "title": "Chief Technology Officer",
+      "action_history": [],
+      "industry_type": "Insurance",
+      "score_pct": "48.5",
+      "deal_category": "Promising Lead",
+      "selected_action": null,
+      "selected_by": null,
+      "action_selected_at": null,
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "87200604-38b4-4db0-802e-0dacb2a1a9fc",
+      "lead_id": "GRV-10244",
+      "company_name": "Comet Retailers",
+      "title": "",
+      "action_history": [],
+      "industry_type": "Retail",
+      "score_pct": "6.0",
+      "deal_category": "Interesting Deal",
+      "selected_action": null,
+      "selected_by": null,
+      "action_selected_at": null,
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "8b39861c-babf-4aa9-8ea8-80b515928a67",
+      "lead_id": "GRV-10245",
+      "company_name": "Lumen Health Partners",
+      "title": "Director of Digital Transformation",
+      "action_history": [],
+      "industry_type": "Healthcare",
+      "score_pct": "28.5",
+      "deal_category": "Hot Deal",
+      "selected_action": null,
+      "selected_by": null,
+      "action_selected_at": null,
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "6ea14720-ce67-42f1-a8d9-3d572afd8cdb",
+      "lead_id": "GRV-10246",
+      "company_name": "Pinnacle Aerospace",
+      "title": "Procurement Specialist",
+      "action_history": [],
+      "industry_type": "Aerospace & Defense",
+      "score_pct": "11.0",
+      "deal_category": "Interesting Deal",
+      "selected_action": null,
+      "selected_by": null,
+      "action_selected_at": null,
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "7a0af75c-7cd6-4809-9aeb-bb6874bcd3e2",
+      "lead_id": "GRV-10247",
+      "company_name": "Redwood Biotech",
+      "title": "VP Data & Analytics",
+      "action_history": [],
+      "industry_type": "Biotechnology",
+      "score_pct": "6.0",
+      "deal_category": "Interesting Deal",
+      "selected_action": null,
+      "selected_by": null,
+      "action_selected_at": null,
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "1422e0cb-2e42-4b38-94bd-78bf1c27ae90",
+      "lead_id": "GRV-10248",
+      "company_name": "Summit Public Services Authority",
+      "title": "Chief AI Officer",
+      "action_history": [],
+      "industry_type": "Public Sector",
+      "score_pct": "48.5",
+      "deal_category": "Promising Lead",
+      "selected_action": null,
+      "selected_by": null,
+      "action_selected_at": null,
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    },
+    {
+      "record_id": "c45d260a-543d-4cab-96a5-ce733e71e4f7",
+      "lead_id": "GRV-10249",
+      "company_name": "Frostline Retail Co.",
+      "title": "",
+      "action_history": [],
+      "industry_type": "Retail",
+      "score_pct": "8.5",
+      "deal_category": "Interesting Deal",
+      "selected_action": null,
+      "selected_by": null,
+      "action_selected_at": null,
+      "next_reminder_at": null,
+      "last_notified_at": "2026-10-11T22:27:06.304834+00:00",
+      "appointment_at": null
+    }
+  ]
 }
